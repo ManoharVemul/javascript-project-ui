@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit_Converter</title> 
+    <link rel="shortcut icon" href="./mfavcon.png" type="image/x-icon">
+<style>
+h1{
+
+    color: rgb(165, 9, 142);
+}
+h2{
+    color: rgb(255, 153, 0);
+}
+body{
+    text-align: center;
+    padding-top: 100px;
+    background-color: #37B7C3;
+}
+.canvart{
+    background-color: #071952;
+    border-radius: 18px;
+    height: 150px;
+  
+
+}
+input{
+   height:30px;
+   border-radius: 10px;
+font-size: large;
+
+}
+option{
+    height:30px;
+   border-radius: 10px;
+font-size: large;
+}
+select{
+    height:30px;
+   border-radius: 10px;
+font-size: large;
+}
+button{
+    height:30px;
+   border-radius: 10px;
+font-size: large;
+color: rgb(255, 0, 195);
+}
+P{
+    background-color: #088395;
+    width: 50%;
+    margin-left: 32%;
+    text-align: center;
+    height:30px;
+   border-radius: 10px;
+font-size: 20px;
+color: rgb(255, 0, 195);   
+}
+</style>
+
+
+</head>
+<body>
+<h1>All in One Converter</h1>
+
+<h3>Currency-Converter(Premium)</h3>
+
+<form action="">
+
+<!-- selection here  -->
+
+<h2>Select here</h2>
+<select name="" id="chosen_option" class="">
+    <option  value="">--select--</option>
+    <option class="selection" value="length" >Length</option>
+    <option class="selection"  value="weight">Weight</option> 
+    <option class="selection"  value="temparature">Tempature</option>
+    <option class="selection"  value="area">Area</option>
+    <option  class="selection" value="time">Time</option>
+</select>
+<button id ="selected">Select</button>
+
+<!-- length here  -->
+<div id="length" class="canvart" style="display: none;">
+
+
+    <h2>Length</h2>
+<input type="number" name="" id="inputLength" placeholder="Enter Value">
+<select name="" id="secLength" class="">
+    <option value="KiloMeter">KiloMeter</option>
+    <option value="Meter">Meter</option></select>
+
+<select name="" id="secLength2" class="">
+    <option value="KiloMeter">KiloMeter</option> 
+    <option value="Meter">Meter</option>
+ 
+</select>
+<button type="button" id="btnLength">Convert</button>
+<!-- <div class = "result"> -->
+<p id ="resLength">Result will be displayed here</p>
+
+
+</div>
+
+<!-- weight here  -->
+
+
+<div id="weight" class="canvart" style="display: none;">
+ <h2>Weight</h2>
+<input type="number" name="" id="inputWeight" placeholder="Enter Value">
+<select name="" id="secWeight" class="">
+    <option value="KiloGram">KiloGram</option>
+    <option value="Gram">Gram</option></select>
+
+    <select name="" id="secWeight2" class="">
+    <option value="KiloGram">KiloGram</option> 
+    <option value="Gram">Gram</option>
+ 
+</select>
+<button type="button" id="btnWeight">Convert</button>
+<div class = "result">
+<p id="resWeight">Result will be displayed here</p>
+</div>
+
+</div>
+
+<!-- temparature here  -->
+
+<div id="temparature" class="canvart"  style="display: none;">
+<h2>Temparature</h2>
+<input type="number" name="" id="inputTempu" placeholder="Enter Value">
+<select name="" id="secTempu" class="">
+    <option value="Celsius">Celsius</option>
+    <option value="Kelvin">Kelvin</option>
+    <option value="Fahrenheit">Fahrenheit</option></select>
+
+    <select name="" id="secTempu2" class="">
+        <option value="Celsius">Celsius</option>
+        <option value="Kelvin">Kelvin</option>
+        <option value="Fahrenheit">Fahrenheit</option></select>
+</select>
+<button type="button" id="btnTempu">Convert</button>
+<div class = "result">
+<p id="resTempu"> Result will be displayed here</p>
+</div>
+
+</div>
+
+<!-- area here  -->
+
+<div id="area" class="canvart"  style="display: none;">
+    <h2>Area</h2>
+   <input type="number" name="" id="inputArea" placeholder="Enter Value">
+   <select name="" id="secArea" class="">
+       <option value="Squarekilometer">Squarekilometer</option>
+       <option value="Squaremeter">Squaremeter</option></select>
+   
+       <select name="" id="secArea2" class="">
+        <option value="Squarekilometer">Squarekilometer</option>
+        <option value="Squaremeter">Squaremeter</option></select>
+ 
+   <button type="button" id="btnArea">Convert</button>
+   <div class = "result">
+   <p id="resArea">Result will be displayed here</p>
+   </div>
+   
+   </div>
+
+<!-- time here  -->
+
+
+<div id="time" class="canvart"  style="display: none;">
+    <h2>Time</h2>
+   <input type="number" name="" id="inputTime" placeholder="Enter Value">
+   <select name="" id="secTime" class="">
+       <option value="Minites">Minites</option>
+       <option value="Seconds">Seconds</option></select>
+   
+       <select name="" id="secTime2" class="">
+        <option value="Minites">Minites</option>
+        <option value="Seconds">Seconds</option></select>
+  
+   <button type="button" id="btnTime">Convert</button>
+   <div class = "result">
+   <p id="resTime">Result will be displayed here</p>
+   </div>
+   
+   </div>
+
+</form>
+
+<script>
+
+// currency converter page
+let btnCC= document.getElementsByTagName("h3");
+console.log(btnCC);
+btnCC[0].addEventListener("click",function(event){
+    event.preventDefault();
+    window.open("http://127.0.0.1:3000/currency-converter.html","_self");
+})
+
+// all in one converter
+
+let length = document.getElementById("length");
+
+let weight = document.getElementById("weight");
+
+let temparature = document.getElementById("temparature");
+
+let area = document.getElementById("area");
+
+let time = document.getElementById("time");
+
+// selecting the dropdown
+let selected= document.getElementById("selected")
+
+selected.addEventListener("click",function (event) {
+    let seg = document.getElementById("chosen_option")
+    
+    event.preventDefault()
+    if(seg.value==="length"){
+      length.style.display="block";
+            weight.style.display="none";
+            temparature.style.display="none";
+            area.style.display="none";
+            time.style.display="none";
+       
+    } else if(seg.value==="weight"){
+        
+      weight.style.display="block"
+
+      length.style.display="none"
+          temparature.style.display="none"
+           area.style.display="none"
+            time.style.display="none"
+            
+    } else if(seg.value==="temparature"){
+         
+        temparature.style.display="block"
+          length.style.display="none"
+          weight.style.display="none"
+           area.style.display="none"
+            time.style.display="none"
+    }else if(seg.value==="area"){
+         
+      area.style.display="block"
+      length.style.display="none"
+          weight.style.display="none"
+           temparature.style.display="none"
+            time.style.display="none"
+
+
+    } else if(seg.value==="time"){
+          
+      time.style.display="block"
+
+      length.style.display="none"
+          weight.style.display="none"
+           area.style.display="none"
+            temparature.style.display="none"
+    } else {
+     let message = document.createElement("p");
+     message.style.color="red"
+     message.style.fontSize="20px"
+     message.innerText="please select option"
+     document.body.append(message);
+
+     length.style.display="none"
+          weight.style.display="none"
+           area.style.display="none"
+            temparature.style.display="none"
+            time.style.display="none"
+    }     
+});
+
+// length functionality
+
+
+let btnLength = document.getElementById("btnLength");
+btnLength.addEventListener("click",function(event){
+event.preventDefault();
+let inputLength = document.getElementById("inputLength").value;
+let secLength=document.getElementById("secLength").value;
+let secLength2=document.getElementById("secLength2").value;
+let result = document.getElementById("resLength");
+
+if(inputLength){
+if(secLength=="KiloMeter"&&secLength2=="Meter"){
+    result.innerText=inputLength*1000
+
+} else if (secLength=="Meter"&&secLength2=="KiloMeter"){
+    result.innerText=inputLength/1000
+}
+ else {
+    result.innerText = "select any one";
+}
+}else {
+result.innerText="please enter value"
+}}
+)   
+
+//  weight functionality
+
+let btnWeight = document.getElementById("btnWeight");
+btnWeight.addEventListener("click",function(event){
+event.preventDefault();
+let inputWeight = document.getElementById("inputWeight").value;
+let secWeight=document.getElementById("secWeight").value;
+let secWeight2=document.getElementById("secWeight2").value;
+let resultWeight = document.getElementById("resWeight");
+console.log(inputWeight)
+if(inputWeight){
+if(secWeight=="KiloGram"&&secWeight2=="Gram"){
+    resultWeight.innerText=inputWeight*1000
+
+} else if (secWeight=="Gram"&&secWeight2=="KiloGram"){
+    resultWeight.innerText=inputWeight/1000
+}
+ else {
+    resultWeight.innerText = "select any one";
+}
+}else{
+resultWeight.innerText="please enter value"
+}}
+)
+
+// temparature functionality
+let btnTempu = document.getElementById("btnTempu");
+btnTempu.addEventListener("click",function(event){
+event.preventDefault();
+let inputTemp = document.getElementById("inputTempu").value;
+let secTempu=document.getElementById("secTempu").value;
+let secTempu2=document.getElementById("secTempu2").value;
+let resultTempu = document.getElementById("resTempu");
+
+
+if(inputTemp){
+
+
+
+inputTempu=Number(inputTemp)
+
+if(secTempu=="Celsius" && secTempu2=="Kelvin"){
+    resultTempu.innerText = inputTempu +273.15
+
+} else if (secTempu=="Celsius" && secTempu2=="Fahrenheit"){
+    resultTempu.innerText=inputTempu*1.8+32
+} else if (secTempu=="Kelvin" && secTempu2=="Celsius"){
+    resultTempu.innerText=inputTempu-273.15
+} else if (secTempu=="Kelvin" && secTempu2=="Fahrenheit"){
+    resultTempu.innerText=(inputTempu-273.15)*1.8+36
+
+} else if (secTempu=="Fahrenheit" && secTempu2=="Celsius"){
+    resultTempu.innerText=(inputTempu-32)/1.8
+
+} else if (secTempu=="Fahrenheit" && secTempu2=="Kelvin"){
+    resultTempu.innerText=(inputTempu-32)/1.8-273.15
+
+} else {
+    resultTempu.innerText = "select any one";
+}}else{
+    resultTempu.innerText="please enter value"
+}
+}
+)
+
+
+// area  functionality
+
+let btnArea = document.getElementById("btnArea");
+btnArea.addEventListener("click",function(event){
+event.preventDefault();
+let inputArea = document.getElementById("inputArea").value;
+let secArea=document.getElementById("secArea").value;
+let secArea2=document.getElementById("secArea2").value;
+let resultArea = document.getElementById("resArea");
+
+if(inputArea){
+if(secArea=="Squarekilometer" && secArea2=="Squaremeter"){
+    resultArea.innerText = inputArea*1000000
+
+} else if (secArea=="Squaremeter" && secArea2=="Squarekilometer"){
+    resultArea.innerText =  inputArea/1000000
+}
+ else {
+    resultArea.innerText = "select any one";
+}
+}else{
+    resultArea.innerText="please enter value"
+}}
+)
+
+// time  functionality
+
+
+let btnTime = document.getElementById("btnTime");
+btnTime.addEventListener("click",function(event){
+event.preventDefault();
+let inputTime = document.getElementById("inputTime").value;
+let secTime=document.getElementById("secTime").value;
+let secTime2=document.getElementById("secTime2").value;
+let resultTime = document.getElementById("resTime");
+
+if(inputTime){
+if(secTime=="Minites"&&secTime2=="Seconds"){
+    resultTime.innerText=inputTime*60
+
+} else if (secTime=="Seconds"&&secTime2=="Minites"){
+    resultTime.innerText=inputTime/60
+}
+ else {
+    resultTime.innerText = "select any one";
+}}else{
+    resultTime.innerText="please enter value"
+}
+}
+)
+
+</script>
+
+</body>
+</html>
