@@ -6,57 +6,85 @@
     <title>Unit_Converter</title> 
     <link rel="shortcut icon" href="./mfavcon.png" type="image/x-icon">
 <style>
-h1{
+/* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    color: rgb(165, 9, 142);
-}
-h2{
-    color: rgb(255, 153, 0);
-}
-body{
-    text-align: center;
-    padding-top: 100px;
-    background-color: #37B7C3;
-}
-.canvart{
-    background-color: #071952;
-    border-radius: 18px;
-    height: 150px;
-  
+        /* Container for centering content */
+        .container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
 
-}
-input{
-   height:30px;
-   border-radius: 10px;
-font-size: large;
+        /* Header Styles */
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
 
-}
-option{
-    height:30px;
-   border-radius: 10px;
-font-size: large;
-}
-select{
-    height:30px;
-   border-radius: 10px;
-font-size: large;
-}
-button{
-    height:30px;
-   border-radius: 10px;
-font-size: large;
-color: rgb(255, 0, 195);
-}
-P{
-    background-color: #088395;
-    width: 50%;
-    margin-left: 32%;
-    text-align: center;
-    height:30px;
-   border-radius: 10px;
-font-size: 20px;
-color: rgb(255, 0, 195);   
-}
+        h2 {
+            color: #50b3a2;
+            margin-bottom: 15px;
+        }
+
+        /* Form Elements Styles */
+        select, input, button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        /* Specific Styles for Buttons */
+        button {
+            background-color: #4a90e2;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        /* Result Text Styles */
+        .result {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* Hide elements by default */
+        .canvart {
+            display: none;
+        }
+
+        /* Error Message Styles */
+        .error-message {
+            color: #e94e77;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+ 
 </style>
 
 
